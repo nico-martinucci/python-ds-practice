@@ -17,6 +17,11 @@ def friend_date(a, b):
         True
     """
     
-    return bool([hobby for hobby in a[2] if hobby in b[2]])
+    # return bool([hobby for hobby in a[2] if hobby in b[2]])
+
+    a_hobbies = set(a[2])
+    b_hobbies = set(b[2])
+
+    return bool(a_hobbies & b_hobbies)
 
     # solution using Sets

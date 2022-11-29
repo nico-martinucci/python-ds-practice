@@ -12,9 +12,9 @@ def flip_case(phrase, to_swap):
 
     """
 
-    return ''.join([
+    swapped_phrase = [
         char.swapcase() if char.lower() == to_swap.lower() else char
         for char in phrase
-    ])
+    ]
 
-    # store in variable, then empty string.join
+    return ''.join(swapped_phrase)

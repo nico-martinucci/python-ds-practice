@@ -12,14 +12,28 @@ def mode(nums):
         2
     """
 
-    count = 0
-    freq = None
+    # count = 0
+    # freq = None
+
+    # for num in nums:
+    #     if nums.count(num) > count:
+    #         count = nums.count(num)
+    #         freq = num
+
+    # return freq
+
+    counter = {}
+    highest_frequency = 0
+    most_frequent = nums[0]
 
     for num in nums:
-        if nums.count(num) > count:
-            count = nums.count(num)
-            freq = num
+        counter[num] = counter[num] + 1 if num in counter else 1
 
-    return freq
+    for (num, frequency) in counter.items():
+        if frequency > highest_frequency:
+            most_frequent = num
+            highest_frequency = frequency
+    
+    return most_frequent
 
     # refactor to O(n) - freq counter
