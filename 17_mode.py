@@ -11,3 +11,15 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+
+    count = 0
+    freq = None
+
+    for num in nums:
+        if nums.count(num) > count:
+            count = nums.count(num)
+            freq = num
+
+    return freq
+
+    # refactor to O(n) - freq counter

@@ -8,6 +8,13 @@ def multiple_letter_count(phrase):
         {'Y': 1, 'a': 1, 'y': 1}
     """
 
-    return {letter : phrase.count(letter) for letter in phrase}
+    # return {letter : phrase.count(letter) for letter in phrase}
 
     # how can we do this with a .get() method call?
+
+    counter = {}
+
+    for letter in phrase:
+        counter[letter] = counter[letter] + 1 if counter.get(letter) else 1
+
+    return counter
