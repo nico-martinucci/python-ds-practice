@@ -14,3 +14,16 @@ def extract_full_names(people):
         >>> extract_full_names(names)
         ['Ada Lovelace', 'Grace Hopper']
     """
+
+    # loop over "people"
+    # build a full-name from props in each
+    # add that to an output list
+    # return the list
+
+    full_names = []
+
+    for person in people:
+        name = f"{person['first']} {person['last']}"
+        full_names.append(name)
+
+    return full_names
